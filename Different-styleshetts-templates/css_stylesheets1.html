@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        html{
+            display: block;
+        }
+        body{
+            font: 100%;
+            margin: 20px;
+            border: 15px solid paleturquoise;
+            padding: 20px;
+            overflow: hidden;
+        }
+        .bo{
+            position: relative;
+            overflow: auto;
+        }
+        div{
+           display: block;
+       }
+        #heading{
+            background-color: rgb(48, 173, 48);
+            color: #ffffff;
+            padding: 15px;
+        }
+        #heading{
+            margin: 4px;
+            border-radius: 4px;
+        }
+        #heading h1,#heading p,#menulist,.menuitem{
+            margin: 0;
+            padding: 0;
+        }
+        .wrap{
+            position: relative;
+            overflow: auto;
+        }
+        .menubar{
+           width: 200px;
+           float: left;
+       }
+       ul{
+           display: block;
+           list-style-type: disc;
+       }
+       li{
+           display: list-item;
+       }
+       li:hover{
+           background-color: #ffffff;
+       }
+       .wrapper{
+           position: relative;
+           overflow: auto;
+       } 
+       .menuitem{
+           background-color: #f1f1f1;
+           border: 1px solid #d4d4d4;
+           list-style-type: none;
+           padding: 2px;
+           cursor: pointer;
+           border-radius: 4px;
+       }
+       .menuitem:first-child{
+           background-color: green;
+           color:white;
+           font-weight:bold;
+       }
+       #top,#sidebar,.menuitem,#bottom{
+           border-radius: 4px;
+           margin: 4px;
+       }
+       #main{
+           padding:10px;
+           margin:0 210px;
+       }
+       h1{
+           display: block;
+           font-size: 2em;
+           margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+       }
+        p{
+        display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+       }
+       a{
+           color: black;
+           text-decoration: underline;
+           cursor: pointer;
+       }
+       a:hover{
+           
+           text-decoration: none;
+           cursor: pointer;
+       }
+       h2{
+        display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+       }
+       p{
+        display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+       }
+       #sidebar{
+        background-color: #32a4e7;
+    color: #ffffff;
+    padding: 10px;
+    width: 180px;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    position: absolute;
+       }
+       h3{
+        display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+       }
+       #bottom{
+           display: block;
+           border: 1px solid #d4d4d4 ;
+           background-color: #f1f1f1;
+           text-align: center;
+           padding: 10px;
+    font-size: 80%;
+    line-height: 14px;
+       }
+        </style>
+</head>
+<body>
+    <div class="bo">
+    <div id="heading">
+        <h1>Welcome to My Homepage</h1>
+        <p>Use the menu to select different Stylesheets</p>
+    </div>
+    <div class="wrap">
+    <div class="menubar">
+    <ul id="menulist">
+        <li class="menuitem" onclick="reStyle(0)">Stylesheet1</li>
+        <li class="menuitem" onclick="reStyle(1)">Stylesheet2</li>
+        <li class="menuitem" onclick="reStyle(2)">Stylesheet3</li>
+        <li class="menuitem" onclick="reStyle(3)">Stylesheet4</li>
+        <li class="menuitem" onclick="reStyle()">no Stylesheet</li>
+        </ul>
+        </div>
+    <div id="main">
+         <h1>Same Page Different Stylesheets</h1>
+         <p>This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:
+         <br>
+            <a href="css_stylesheets1.html" target="_blank" onclick="restyle(0);return false">stylesheet1</a>, 
+            <a href="cssstylesheet2.html" target="_blank" onclick="restyle(1);return false">stylesheet2</a>,
+            <a href="cssstylesheet3.html" target="_blank" onclick="restyle(2);return false">stylesheet3</a>,
+            <a href="cssstylesheet4.html" target="_blank" onclick="restyle(3);return false">stylesheet4</a>.
+    </p>
+            <h2>No Styles</h2>
+            <p>This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet:
+            <br>
+            <a href="cssstylesheet5.html" target="_blank" onclick="restyle();return false">No stylesheet</a>.
+            </p>
+        </div>
+    <div id="sidebar">
+        <h3>Side-bar</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    </div>
+    </div>
+    <div id="bottom">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+    </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            display: block;
+    font-size: 2em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+        }
+        h3 {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+        }
+        p{
+            display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+        }
+        ul{
+            display: block;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+        }
+        html{
+            display: block;
+        }
+        
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            
+            margin: 8px;
+            line-height: 20px;
+            background-color: #d14836;
+            display: block;
+        }
+        .full{
+           position: relative;
+           overflow: auto;
+        }
+        .menuitem:nth-child(2){
+            background-color: white;
+            color:#d14836;
+            font-weight: bold;
+        }
+        div{
+            display: block;
+        }
+        .head1{
+            color:#ffffff;
+            padding: 15px;
+            font-size: 30px;
+            line-height: 26px;
+        }
+        .head1 h1{
+            margin: 0%;
+            line-height:50px;
+        }
+        .head2{
+            position: relative;
+            overflow: auto;
+        }
+        .menubar{
+            width: 190px;
+            float:  right;
+        }
+        #menulist{
+            padding: 0%;
+            font: 16px verdana;
+        }
+        .menuitem{
+            width:155px;
+            background-color: #d14836;
+            border: 1px solid #d14836;
+            border-radius:40px;
+            color: #ffffff;
+            list-style-type: none;
+            margin: 10px;
+            padding: 5px;
+            text-align: center;
+            cursor: pointer;
+        }
+        li:hover{
+            display: list-item;
+            background-color: #ffffff;
+            color: red;
+        }
+
+        #main{
+            padding: 10px;
+    background-color: #ffffff;
+    font: 80% Verdana;
+        }
+        #main h1,#main h2{
+            color: #d14836;
+          }
+        a{
+            color: #d14836;
+    text-decoration: none;
+    cursor: pointer;
+        }
+        h2{
+            display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+        }
+        #sidebar{
+            background-color: #F6D6DAD7;
+            color: #d14836;
+            padding: 10PX;
+        }
+        #bottom{
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 70%;
+        }
+    </style>
+</head>
+<body>
+    <div class="full">
+        <div class="head1">
+            <h1>Welcome to My Homepage</h1>
+            <p>Use the menu to select different Stylesheets</p>
+        </div>
+        <div class="head2">
+            <div class="menubar">
+                <ul id="menulist">
+                    <li class="menuitem" onclick="reStyle(0)">Stylesheet1</li>
+                    <li class="menuitem" onclick="reStyle(1)">Stylesheet2</li>
+                    <li class="menuitem" onclick="reStyle(2)">Stylesheet3</li>
+                    <li class="menuitem" onclick="reStyle(3)">Stylesheet4</li>
+                    <li class="menuitem" onclick="reStyle()">no Stylesheet</li>
+                    </ul>
+                    </div>
+            <div id="main">
+         <h1>Same Page Different Stylesheets</h1>
+         <p>This is a demonstration of how different stylesheets can change the layout of your HTML page. You can change the layout of this page by selecting different stylesheets in the menu, or by selecting one of the following links:
+         <br>
+            <a href="css_stylesheets1.html" target="_blank" onclick="restyle(0);return false">stylesheet1</a>, 
+            <a href="cssstylesheet2.html" target="_blank" onclick="restyle(1);return false">stylesheet2</a>,
+            <a href="cssstylesheet3.html" target="_blank" onclick="restyle(2);return false">stylesheet3</a>,
+            <a href="cssstylesheet4.html" target="_blank" onclick="restyle(3);return false">stylesheet4</a>.
+    </p>
+            <h2>No Styles</h2>
+            <p>This page uses DIV elements to group different sections of the HTML page. Click here to see how the page looks like with no stylesheet:
+            <br>
+            <a href="cssstylesheet5.html" target="_blank" onclick="restyle();return false">No stylesheet</a>.
+            </p>
+            </div>
+    <div id="sidebar">
+        <h3>Side-bar</h3>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+    </div>
+    </div>
+        </div>
+    <div id="bottom">
+        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
+    </div>
+    </div>
+</body>
+</html>
